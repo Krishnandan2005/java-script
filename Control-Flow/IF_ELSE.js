@@ -28,3 +28,21 @@ if ((userLoggedIn && hasDeitCard) && (loggedInFroEmail || loggedInFromGoggle)) {
     console.log("Your are aloowed for Shopping Here.\n we welcome you to the Apple Store");
 
 }
+
+// nullish coalescing operator (??) : null undefined ===> first value assigned
+
+let val1;
+// val1 = 5 ?? 10; // -> first value assigned
+// val1 = null ?? 10;
+// val1 = undefined ?? 15;
+val1 = null ?? 5 ?? 10 ?? 15;
+console.log(val1);
+
+
+// ternary operator 
+// condition ? true : false 
+const iceTeaPrice = 100;
+iceTeaPrice >= 80 ? console.log("More Than 80") : console.log("Less than 80");
+
+
+
