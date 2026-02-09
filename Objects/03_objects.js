@@ -1,7 +1,3 @@
-// singleton 
-// Object.create();
-
-
 // symbol 
 const mySym = Symbol("key1")
 
@@ -51,6 +47,8 @@ JsUser.greetingTwo = function(){
     console.log(`Hello Js User ${this["Full Name "]}`);
     
 }
+
+// print 
 console.log(JsUser.greeting);
 JsUser.greeting();
 console.log(JsUser.greetingTwo());

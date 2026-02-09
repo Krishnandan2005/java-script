@@ -33,12 +33,12 @@
 // Chai()
 
 
-// Arrow Function 
-const chai = () => {
-    let username = "Krish"
-    console.log(this);
-}
-chai()
+// // Arrow Function 
+// const chai = () => {
+//     let username = "Krish"
+//     console.log(this);
+// }
+// chai()
 
 
 // const AddTwo = (num1,num2) => {
