@@ -22,11 +22,12 @@ for (const [key, value] of map) {
     console.log(key, ':-', value);
 }
 
-const myObj = {
-    "game1" : "Ant-man",
-    "game2" :"Spider-man"
-}
-for (const [key, value] of myObj) {
-    console.log(key, ':-', value);
-}
+// const myObj = {
+//     "game1" : "Ant-man",
+//     "game2" :"Spider-man"
+// }
+// for (const [key, value] of myObj) {
+//      // TypeError: myObj is not iterable 
+//     console.log(key, ':-', value);
+// }
 

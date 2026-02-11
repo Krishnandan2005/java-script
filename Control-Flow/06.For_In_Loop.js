@@ -19,12 +19,13 @@
 
 
 // maps  -->> an object in JS (Key-value pair)
-const map = new Map()
-map.set('IN', "India")
-map.set('USA', "Unites States Of America")
-map.set('JP', "Japan")
-// console.log(map);
-for (const key in map) {
-    console.log(key);
+// can't be iterated 
+// const map = new Map()
+// map.set('IN', "India")
+// map.set('USA', "Unites States Of America")
+// map.set('JP', "Japan")
+// // console.log(map);
+// for (const key in map) {
+//     console.log(key);
     
-}
+// }
