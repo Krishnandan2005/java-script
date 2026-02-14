@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code Lecture 34</title>
+</head>
+
+<body style="background-color: black; color: whitesmoke;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    // add a list item 
+    function addLanguage(langName) {
+        const ListItem = document.createElement('Li') // create an element 
+        ListItem.innerHTML = `${langName}` // text is inserted
+        document.querySelector('.language'). // select unordered list 
+            appendChild(ListItem) // attach the child -->> has to traverse the complete tree
+    }
+    addLanguage("Python")
+    addLanguage("Type-Script")
+
+
+    // optimized function 
+    function addOptLang(langName) {
+        const ListItem = document.createElement('Li')
+        ListItem.appendChild(document.createTextNode(langName)) // created textNode will be inserted int listitem
+        document.querySelector('.language').
+        appendChild(ListItem)
+    }
+    addOptLang("GO-Lang")
+
+
+    // Editing 
+    const SecChild=document.querySelector("Li:nth-child(2)")
+    // SecChild.innerHTML="Mojo"
+    // new element is replaed
+    const newLi = document.createElement('li')
+    newLi.textContent = "JAVA"
+    SecChild.replaceWith(newLi)
+
+    // edit 
+    const firChild = document.querySelector("Li:first-child")
+    firChild.outerHTML='<li>TypeScript</li>'
+
+    // remove element 
+    const lastChild = document.querySelector("Li:last-child")
+    lastChild.remove()
+    
+
+
+</script>
+
+</html>
