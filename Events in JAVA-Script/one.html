@@ -1,43 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <titl>Events</titl></title>
+    <titl>Events</titl>
+    </title>
 </head>
+
 <body style="background-color: #414141; color: aliceblue;">
-    <h1>=====>=<=>=<=>=<=>=<=> EVENTS IN JAVA-SCRIPT <=>=<=>=<=>=<=======</h1>
-    <h2>========><=><=><=>=>Amazing image <=><=><=><=======</h2>
-    <div >
+    <h1>EVENTS IN JAVA-SCRIPT </h1>
+    <h2>Amazing image</h2>
+    <div>
         <ul id="images">
-            <li><img width="400px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
-            <li><img width="400px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><img width="400px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><img width="400px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""  ></li>
-            <li><img width="400px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="400px" id="photoshop"
+                    src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="photoshop"></li>
+            <li><img width="400px" id="japan"
+                    src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="400px" id="river"
+                    src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="400px" id="owl"
+                    src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="400px" id="prayer"
+                    src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
             <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
         </ul>
-   </div>
+    </div>
 </body>
-<script> 
-// --->>> not to be used due to less features 
-// document.getElementById('owl').onclick = function(){
-//     alert("owl clicked again")
-// }
+<script>
 
-// attachEvent
-// jQuerry - on 
+    // 1 --- >>> ONCLICK EVENT HANDLING --- >>>
 
-// ---->>> this method is used widely nowadays
-// --->>> best approach 
-// document.getElementById('owl').addEventListener('double click',function(){
-//     alert("owl clicked again and again ")
-// },false)
+    // --->>> not to be used due to less features
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked again")
+    // }
 
-document.getElementById('owl').addEventListener('click',function(event){
-    console.log(event);
-    
-})
+    // attachEvent
+    // jQuerry - on
+
+    // ---->>> this method is used widely nowadays
+    // --->>> best approach
+    // document.getElementById('owl').addEventListener('double click',function(){
+    //     alert("owl clicked again and again ")
+    // },false)
+
+
+    //2 --->>> EVENT OBJECTS AND METHODS --->>>> 
+
+    // document.getElementById('owl').addEventListener('click',function(event){
+    //     console.log(event);
+
+    // })
+
+
+    // 3 --->>> BUBBLING AND CAPTURING --->>> 
+
+    // document.getElementById('images').addEventListener('click', function (event) {
+    //     console.log("You clicked inside unordered List !!!");
+    // }, false)
+    // // false -->>> BUbbling {inside --->> Out}
+    // document.getElementById('owl').addEventListener('click', function (event) {
+    //     console.log("You Clicked the owl again");
+    //     event.stopPropagation(); // to stop Bubbling
+
+    // }, false)
+
+
+    // 4 --->>>   STOPPING THE DEFAULT ACTION --->>> 
+    // document.getElementById('google').addEventListener('click', function (event) {
+    //     event.preventDefault(); // stops the default action of browser
+    //     console.log("Google link was clicked ");
+    //     event.stopPropagation();
+
+    // }, false)
+
+
+    // Project --->>> CLICK AND GAYAB --->>> 
+    document.querySelector('#images').addEventListener('click', function (event) {
+        // METHOD 1 -->> USING PARENTNODE 
+        // console.log(event.target.parentNode); 
+        // let removeIt=event.target.parentNode
+        // // removeIt.remove();
+        // removeIt.parentNode.removeChild(removeIt);
+
+        // METHOD 2 --->>> USING TAGNAME
+        let tag_name = event.target.tagName
+        console.log(tag_name);
+        if (tag_name === 'IMG') {
+            console.log(event.target.id);
+            event.target.parentNode.remove();
+
+
+        }
+    }, false)
 
 </script>
+
 </html>
