@@ -17,5 +17,27 @@
     <h1>******Learning Async code with Chai aur code *******</h1>
     <button id="stop">Stop</button>
 </body>
+<script>
+    // 1 
+    setTimeout(function(){
+        console.log("Hi Krishna")
+    },2000) //--->>> means execute after 2 sec 
 
+    // 2 
+    const changeText = function(){
+     document.querySelector('h1').innerHTML = "Best Series of JS"
+    }
+
+    setTimeout(changeText,3000)
+
+    const set = function(){
+        console.log("👆🏻🍿");
+        
+    } // -->> means after every 4 sec
+    const stop = setInterval(set,2000)
+
+    // clearInterval(stop,12000)
+
+
+</script>
 </html>
