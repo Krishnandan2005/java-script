@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async code</title>
+    <style>
+        body {
+            background-color: black;
+            color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>******Learning Async code with Chai aur Java-Script *******</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // Declare intervalId in outer space so that both listner can access 
+    let intervalId;
+
+    const greetings = function (str) {
+        console.log("Hi Krishna ", str, Date.now());
+    };
+
+    // Start Button logic
+    document.querySelector('#start').addEventListener('click', function () {
+        if (!intervalId) {
+            intervalId = setInterval(greetings, 1000, 'Good Morning');
+            console.log("🚀 Interval Started");
+        }
+    });
+
+    // Stop Button logic
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearInterval(intervalId);
+        intervalId = null; // Reset variable so we can start it again later
+        console.log("🛑 Interval Stopped");
+    });
+</script>
+
+</html>

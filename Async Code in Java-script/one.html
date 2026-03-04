@@ -18,26 +18,28 @@
     <button id="stop">Stop</button>
 </body>
 <script>
+    // ---->>>> setTimeout ---- clearTimeout ---->>>> 
     // 1 
-    setTimeout(function(){
+    setTimeout(function () {
         console.log("Hi Krishna")
-    },2000) //--->>> means execute after 2 sec 
+    }, 2000) //--->>> means execute after 2 sec 
+
 
     // 2 
-    const changeText = function(){
-     document.querySelector('h1').innerHTML = "Best Series of JS"
+    const changeText = function () {
+        document.querySelector('h1').innerHTML = "Best Series of JS"
     }
 
-    setTimeout(changeText,3000)
+    const erase = setTimeout(changeText, 3000) // change the text after 3 sec
 
-    const set = function(){
-        console.log("👆🏻🍿");
-        
-    } // -->> means after every 4 sec
-    const stop = setInterval(set,2000)
 
-    // clearInterval(stop,12000)
+    // 3 
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(erase) // stop when pressed 
+        console.log('STOPPED')
+    })
 
 
 </script>
+
 </html>
