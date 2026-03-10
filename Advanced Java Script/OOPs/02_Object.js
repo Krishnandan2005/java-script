@@ -1,6 +1,6 @@
-function product(num){
+function product(num) {
     // this.num=num;
-    return num*5;
+    return num * 5;
 }
 product.anything = 2
 // console.log(product(5));
@@ -8,22 +8,22 @@ product.anything = 2
 // console.log(product.prototype);
 
 
-function createUser(username,price){
-    this.username=username;
-    this.price=price;
+function createUser(username, price) {
+    this.username = username;
+    this.price = price;
 }
-createUser.prototype.increment = function(){
-    this.price= this.price + 10; // jis ne bulaya hai uski score++
+createUser.prototype.increment = function () {
+    this.price = this.price + 10; // jis ne bulaya hai uski score++
     // context dene ke liye 
 }
 
-createUser.prototype.printMe = function(){
+createUser.prototype.printMe = function () {
     console.log(`price is ${this.price}`);
-    
+
 }
 
-const chai = new createUser('chai',25)
-const tea = new createUser('tea',250)
+const chai = new createUser('chai', 25)
+const tea = new createUser('tea', 250)
 chai.increment()
 chai.printMe()
 
