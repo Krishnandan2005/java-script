@@ -12,7 +12,7 @@ class user {
 }
 
 // const chai = new user("Krishnandan")
-// console.log(chai.createID());
+// console.log(chai.createID()); no access due to static
 
 class teacher extends user {
     constructor(username,email){
@@ -23,4 +23,4 @@ class teacher extends user {
 
 const iphone = new teacher("Ipad","Apple.ios")
 iphone.logMe()
-iphone.createID()
+// iphone.createID() -->> no access 

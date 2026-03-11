@@ -35,5 +35,5 @@ masalaChai.logMe()
 console.log(chai === masalaChai);
 console.log(chai instanceof teacher );
 console.log(chai instanceof user );
-console.log(teacher instanceof user );
+console.log(teacher instanceof user ); // teacher is class and not object of user class so false 
 

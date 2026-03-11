@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Button clicked</button>
+</body>
+<script>
+    class React {
+        constructor() {
+            this.library = "React"
+            this.server = "https://localhost:3000"
+
+            // Requirement 
+            document
+                .querySelector('button')
+                .addEventListener('click', this.handleClick.bind(this))
+            // -->> Why .bind(this) is Used ???
+            // bind() forces this to stay with the React object.
+            //this → React object (app)
+
+            // When passing a class method as a callback, this can be lost.
+            //bind(this) fixes it.
+        }
+
+        handleClick() {
+            console.log("Button Clicked");
+            console.log(this.server);
+        }
+    }
+    const app = new React() // -->> creates an object from the React class.
+</script>
+
+</html>
