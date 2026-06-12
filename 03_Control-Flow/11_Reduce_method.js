@@ -20,15 +20,15 @@
 const myShoppingCart = [
     {
         courseName : "JS course ",
-        price : 9999
+        price : 9998.35
     },
     {
         courseName : "Java course ",
-        price : 999
+        price : 999.36
     },
     {
         courseName : "C++ course ",
-        price : 999
+        price : 999.57
     },
     {
         courseName : "Mobile Development course ",
@@ -41,4 +41,4 @@ const myShoppingCart = [
 ]
 
 const Total = myShoppingCart.reduce( (acc , item ) => acc + item.price,0)
-console.log(`Grant total Bill = INR ${Total}`);
+console.log(`Grant total Bill = ₹ ${Total}`);

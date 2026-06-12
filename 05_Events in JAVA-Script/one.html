@@ -24,7 +24,8 @@
                     alt=""></li>
             <li><img width="400px" id="owl"
                     src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
-                    alt=""></li>
+                    alt="" ></li>   
+                    <!-- method 1 ---  onclick="alert('owl was clicked!!🦉')" -->
             <li><img width="400px" id="prayer"
                     src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
                     alt=""></li>
@@ -36,18 +37,15 @@
 
     // 1 --- >>> ONCLICK EVENT HANDLING --- >>>
 
-    // --->>> not to be used due to less features
+    // --->>> method 2 -- not to be used due to less features
     // document.getElementById('owl').onclick = function(){
-    //     alert("owl clicked again")
+    //     alert("owl clicked again 🦉🦉")
     // }
 
-    // attachEvent
-    // jQuerry - on
-
-    // ---->>> this method is used widely nowadays
+    // ---->>> method 3 --  is used widely nowadays
     // --->>> best approach
-    // document.getElementById('owl').addEventListener('double click',function(){
-    //     alert("owl clicked again and again ")
+    // document.getElementById('owl').addEventListener('dblclick',function(){
+    //     alert("owl clicked again and again 🦉🦉🦉 ")
     // },false)
 
 
@@ -55,8 +53,7 @@
 
     // document.getElementById('owl').addEventListener('click',function(event){
     //     console.log(event);
-
-    // })
+    // },false)
 
 
     // 3 --->>> BUBBLING AND CAPTURING --->>> 
@@ -64,40 +61,39 @@
     // document.getElementById('images').addEventListener('click', function (event) {
     //     console.log("You clicked inside unordered List !!!");
     // }, false)
-    // // false -->>> BUbbling {inside --->> Out}
+    // // // false -->>> BUbbling {inside --->> Out}
     // document.getElementById('owl').addEventListener('click', function (event) {
     //     console.log("You Clicked the owl again");
     //     event.stopPropagation(); // to stop Bubbling
-
     // }, false)
 
 
-    // 4 --->>>   STOPPING THE DEFAULT ACTION --->>> 
+    // // 4 --->>>   STOPPING THE DEFAULT ACTION --->>> 
     // document.getElementById('google').addEventListener('click', function (event) {
     //     event.preventDefault(); // stops the default action of browser
     //     console.log("Google link was clicked ");
-    //     event.stopPropagation();
-
+    //     // event.stopPropagation();
     // }, false)
 
 
-    // Project --->>> CLICK AND GAYAB --->>> 
+    // // Project --->>> CLICK AND GAYAB --->>> 
+    // is case me li pe click krne se pura hi gayab ho ja raha hai
+    // document.querySelector('#images').addEventListener('click', function (event) {
+    //     console.log(event.target.parentNode)
+    //     let element = event.target.parentNode
+    //     element.remove()  // method 1 to remove
+    //     // element.parentNode.removeChild(element) // li-->> ul -->> li 
+    // }, false)
+
+
     document.querySelector('#images').addEventListener('click', function (event) {
-        // METHOD 1 -->> USING PARENTNODE 
-        // console.log(event.target.parentNode); 
-        // let removeIt=event.target.parentNode
-        // // removeIt.remove();
-        // removeIt.parentNode.removeChild(removeIt);
-
-        // METHOD 2 --->>> USING TAGNAME
-        let tag_name = event.target.tagName
-        console.log(tag_name);
-        if (tag_name === 'IMG') {
-            console.log(event.target.id);
-            event.target.parentNode.remove();
-
-
+        console.log(event.target.tagName)
+        if(event.target.tagName === 'IMG'){
+            let element = event.target.parentNode
+            element.remove()  // method 1 to remove
+        // element.parentNode.removeChild(element) // li-->> ul -->> li 
         }
+        
     }, false)
 
 </script>

@@ -1,3 +1,4 @@
+// real life use of filter 
 const books = [
     { title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004 },
     { title: 'Book Two', genre: 'Non-Fiction', publish: 1992, edition: 2008 },
@@ -9,11 +10,8 @@ const books = [
     { title: 'Book Eight', genre: 'Science', publish: 2011, edition: 2016 },
     { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
   ];
-
-  let userBooks = books.filter( (bk) => bk.genre === 'History')
-
-  userBooks = books.filter( (bk) => { 
-    return bk.publish >= 1980 && bk.edition >= 2000
-     && bk.genre === "Non-Fiction"
+  userBooks = books.filter( (book) => { 
+    return book.publish >= 1980 && book.edition >= 2000
+     && book.genre === "Non-Fiction"
 })
   console.log(userBooks);

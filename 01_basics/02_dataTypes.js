@@ -1,6 +1,7 @@
 "use strict"; // treat all JS code as newer version
 
 // alert( 3 + 3) -->> we are using nodeJs and not browser
+
 let name = "krishnandan"
 let age = 18
 let isLoggedin = false
@@ -9,7 +10,7 @@ let temp ;
 
 // number 2 to power 53 
 // bigint 
-//string => ""
+//string => "" / ''
 // boolean => true  or false 
 // null => standalone value 
 // undefined 
@@ -19,5 +20,6 @@ let temp ;
 
 console.log(typeof"hitesh")
 console.log(typeof age)
+
 console.log(typeof null)
 console.log(typeof undefined)

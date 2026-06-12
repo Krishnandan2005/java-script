@@ -1,15 +1,24 @@
+// Function definition
 function counting(num) {
-    // Base Case: Stops the function from running forever
+
+    // Base case
     if (num == 0) return;
 
-    // Action: Print the current number
+    // Print current number
     console.log(num);
 
-    // Recursive Call: Call the function again with a smaller number
+    // Recursive call
     counting(num - 1);
 }
-counting(5);
-console.log();
+
+// Function call
+// counting(5);
+
+// return type 
+const sum = function add (x,y){
+    console.log(x+y);
+}
+console.log("Sum :",sum(12,13));
 
 
 function loginUserMessage(Username = "krish") { // by adding krish we make sure
@@ -17,31 +26,27 @@ function loginUserMessage(Username = "krish") { // by adding krish we make sure
     return `${Username} Just Logged in`
 }
 console.log(loginUserMessage("Krishnandan"));
-console.log();
 // console.log(loginUserMessage(" ")); --->>   Just Logged in
 // console.log(loginUserMessage()); --- >> undefined Just Logged in
 
-
+// Lec 20 
 // important 
 // Shopping list -->> when we don't know the number of items 
-function calculateCartPrice(...num) {
+function calculateCartPrice(val1,val2,...num) {
     return num
 }
-console.log(calculateCartPrice(200, 3000, 456));
-console.log();
-
+console.log(calculateCartPrice(200, 300, 400 ,500 ,600 ,700));
 
 // object handling in function
 const user = {
     userName: "Krishnandan ",
     price: "1999"
 }
-function handleObject(anyobject) {
-    console.log(`Username is ${anyobject.userName} and price is ${anyobject.price}`);
+function handleObject(obj) {
+    console.log(` ${obj.userName} your total payable Amount is ${obj.price}`);
 }
 handleObject(user)
-console.log();
-
+handleObject({userName :"krish" , price : 399})
 
 // Array Handling 
 const myArray = [100, 200, 300, 400, 500]

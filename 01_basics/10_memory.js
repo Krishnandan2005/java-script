@@ -14,13 +14,13 @@ console.log();
 // object 
 
 let userOne = {
-    name : "Krishnanda",
+    name : "Krishna",
     age : 21
 }
 
 let userTwo = userOne
 
-userTwo.name = "Siddhant"
+userTwo.name = "Krishnandan"
 console.log(userTwo.name);
 console.log(userOne.name);
 

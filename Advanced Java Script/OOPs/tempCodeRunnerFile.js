@@ -1,2 +1,1 @@
-myHeros.heyHitesh()
-// heroPower.heyHitesh()
+console.log(this);

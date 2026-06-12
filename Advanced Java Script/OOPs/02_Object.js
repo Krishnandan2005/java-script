@@ -1,47 +1,45 @@
 function product(num) {
-    // this.num=num;
+    this.num=num;
     return num * 5;
 }
 product.anything = 2
-// console.log(product(5));
-// console.log(product.anything);  // --->>> Add property anything to function
-// console.log(product.prototype);
+console.log(product(5));
+console.log(product.anything);  // --->>> Add property anything to function
+console.log(product.prototype);
 
-
+//  
 function createUser(username, price) {
     this.username = username;
     this.price = price;
 }
 createUser.prototype.increment = function () {
-    this.price = this.price + 10; // jis ne bulaya hai uski score++
-    // context dene ke liye 
+    this.price = this.price + 10; // jis ne bulaya hai uski price increase kr dega 
 }
-
 createUser.prototype.printMe = function () {
     console.log(`price is ${this.price}`);
-
 }
-
 const chai = new createUser('chai', 25)
 const tea = new createUser('tea', 250)
 chai.increment()
 chai.printMe()
+tea.increment()
+tea.printMe()
 
 
-/*
+// /*
 
-Here's what happens behind the scenes when the new keyword is used:
+// Here's what happens behind the scenes when the new keyword is used:
 
-## A new object is created:
- The new keyword initiates the creation of a new JavaScript object.
+// ## A new object is created:
+//  The new keyword initiates the creation of a new JavaScript object.
 
-## A prototype is linked:
- The newly created object gets linked to the prototype property of the constructor function. This means that it has access to properties and methods defined on the constructor's prototype.
+// ## A prototype is linked:
+//  The newly created object gets linked to the prototype property of the constructor function. This means that it has access to properties and methods defined on the constructor's prototype.
 
-## The constructor is called:
- The constructor function is called with the specified arguments and this is bound to the newly created object. If no explicit return value is specified from the constructor, JavaScript assumes this, the newly created object, to be the intended return value.
+// ## The constructor is called:
+//  The constructor function is called with the specified arguments and this is bound to the newly created object. If no explicit return value is specified from the constructor, JavaScript assumes this, the newly created object, to be the intended return value.
 
-## The new object is returned:
- After the constructor function has been called, if it doesn't return a non-primitive value (object, array, function, etc.), the newly created object is returned.
+// ## The new object is returned:
+//  After the constructor function has been called, if it doesn't return a non-primitive value (object, array, function, etc.), the newly created object is returned.
 
-*/
+// */

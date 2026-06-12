@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code Lecture 34</title>
+</head>
+
+<body style="background-color: black; color: whitesmoke;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    // it had to traverse the tree each time 
+    function addLang(langname) {
+        const element = document.createElement("li")
+        element.innerHTML = `${langname}`
+        document.querySelector(".language").appendChild(element)
+    }
+    addLang("TypeScript")
+    addLang("Java")
+
+    // optimized approach 
+    function addoptiLang(langname) {
+        const element = document.createElement("li")
+        element.appendChild(document.createTextNode(langname))
+        document.querySelector(".language").appendChild(element)
+    }
+    addoptiLang("C++")
+    addoptiLang("Python")
+    addoptiLang("C#")
+
+
+    // editing 
+    const sixthlang = document.querySelector("li:nth-child(6)")
+    console.log(sixthlang)
+    // sixthlang.innerHTML ="Mojo" // change
+
+    // const element = document.createElement("li");
+    // element.appendChild(document.createTextNode("Mojo"));
+    // sixthlang.replaceWith(element);
+
+    // const element = document.createElement("li");
+    // element.textContent = "Mojo";
+    // sixthlang.replaceWith(element);
+
+    // edit 
+    const firstlang = document.querySelector("li:nth-child(1)")
+    console.log(firstlang)
+    firstlang.outerHTML= "<li>C</>"
+
+    // remove 
+    const fourthlang = document.querySelector("li:nth-child(4)")
+    console.log(fourthlang)
+    fourthlang.remove()
+</script>
+
+</html>

@@ -4,15 +4,14 @@ class user {
     }
     logMe(){
         console.log(`UserName : ${this.username}`);
-        
     }
    static createID(){
         return `261130#${this.username}&`
     }
 }
 
-// const chai = new user("Krishnandan")
-// console.log(chai.createID()); no access due to static
+const chai = new user("Krishnandan")
+// console.log(chai.createID()); // no access due to static
 
 class teacher extends user {
     constructor(username,email){
@@ -21,6 +20,6 @@ class teacher extends user {
     }
 }
 
-const iphone = new teacher("Ipad","Apple.ios")
-iphone.logMe()
+const ipad = new teacher("myIpadAirM3","Apple.ios")
+ipad.logMe()
 // iphone.createID() -->> no access 

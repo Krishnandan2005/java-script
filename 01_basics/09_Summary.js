@@ -1,16 +1,6 @@
 // primitive 
 const score = 1000 
 const scoreValue = 10000.335
-
-const isLoggedIn = false
-const outsideTemp = null
-let userEmail;
-
-// notes 
-const id = Symbol('123')
-const anotherId = Symbol('123')
-console.log(id == anotherId);
-
 const bigNum = 32n
 
 // Array 
@@ -29,11 +19,24 @@ const myFunction = function(){
 }
 
 // typeof 
-
+console.log(typeof score);
+console.log(typeof scoreValue);
 console.log(typeof bigNum);
-console.log(typeof myObj);
-console.log(typeof myFunction);
+console.log();
+
+
 console.log(typeof heros);
+
+console.log(typeof myObj);
+
+console.log(typeof myFunction);
+console.log();
+
+
+
+// notes 
+const id = Symbol('123')
+const anotherId = Symbol('123')
 console.log(typeof id);
-console.log(typeof userEmail);
+console.log(id == anotherId);
 

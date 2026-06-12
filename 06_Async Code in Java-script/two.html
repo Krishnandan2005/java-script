@@ -7,46 +7,49 @@
     <title>Async code</title>
     <style>
         body {
-            background-color: blanchedalmond;
-            color: darkorange;
+            background-color: rgb(228, 215, 195);
+            color: rgb(148, 94, 28);
         }
-        #start{
-            height: 25px;
+
+        #start {
+            height: 30px;
             width: 50px;
-            border-radius: 2px;
+            border-radius: 5px;
             border: 1px black solid;
-            background-color: lightgreen;
-            color: darkorange ;
+            background-color: rgb(7, 91, 7);
+            color: rgb(214, 210, 206);
         }
-        #stop{
-            height: 25px;
+
+        #stop {
+            height: 30px;
             width: 50px;
-            border-radius: 2px;
+            border-radius: 5px;
             border: 1px black solid;
-            background-color: lightsalmon;
-            color:darkviolet;
+            background-color: rgb(86, 30, 8);
+            color: rgb(235, 233, 236);
         }
     </style>
 </head>
 
 <body>
-    <h1>******Learning Async code with Chai aur Java-Script *******</h1>
+    <h1>***Learning Async code with Chai aur Java-Script***</h1>
     <button id="start">Start</button>
     <button id="stop">Stop</button>
 </body>
 <script>
     // Declare intervalId in outer space so that both listner can access 
     let intervalId;
-
     const greetings = function (str) {
-        console.log("Hi Krishna ", str, Date.now());
+        const now = new Date();
+        const time = now.toLocaleTimeString();
+        console.log("Hi Krishna ", str, time);
     };
 
     // Start Button logic
     document.querySelector('#start').addEventListener('click', function () {
         if (!intervalId) {
-            intervalId = setInterval(greetings, 1000, 'Good Morning');
-            console.log("🚀 Interval Started");
+            intervalId = setInterval(greetings, 2000, 'Good Morning');
+            console.log("🟢 Interval Started");
         }
     });
 

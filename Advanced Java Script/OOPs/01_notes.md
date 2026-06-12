@@ -18,8 +18,8 @@
 - instances (new , this)
 
 ### 4 Pillars of OOPs  --->>> study with AI
-- Abstraction  -->> Hide details 
+- Abstraction  -->> Hide details  -->> fetch
 - Encapsulation -->> wrap up data and function 
-- Inheritence -->> 
-- Polymorphism  -->> 
+- Inheritence -->> to inherit the properties
+- Polymorphism  -->>  many forms 
 

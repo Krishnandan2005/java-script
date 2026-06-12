@@ -6,7 +6,7 @@ const course = {
 
 // destructuring 
 const {courseInstructor : instructor} = course
-// console.log(courseInstructor);
+console.log(course.courseInstructor);
 console.log(instructor);
 
 // API 

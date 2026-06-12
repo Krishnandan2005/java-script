@@ -10,12 +10,14 @@ if (userEmail) { // it assumes that string had a value  even space
     console.log("Don't have an user Email");
 }
 
+//  to check array and object are empty or not 
 // empty array 
 const myArray = []
 if (myArray.length === 0) {
     console.log("Array is empty");
 }
 
+// Important object empty
 const emptyobj = {}
 if (Object.keys(emptyobj).length === 0) { // Object.keys(emptyobj) -- >> array 
     console.log("Object is Empty");

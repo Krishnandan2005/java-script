@@ -1,0 +1,1 @@
+ const newNums = nums.map( (num) => num+10) 

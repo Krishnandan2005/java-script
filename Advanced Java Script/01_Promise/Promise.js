@@ -1,62 +1,48 @@
 // FIRST PROMISE 
 // --->> create an instance of object
 const promiseOne = new Promise(function (resolve, reject) {
-    // Do an Asyn task
-    // DB calls , cryptography , network  
-
+    // Do an Asyn task -->>  DB calls , cryptography , network  
     setTimeout(function () {
-        console.log("After 1 sec --->>>> ");
-        console.log("Async Task is completed");
-        resolve()
+        console.log("Async Task1 is completed");
+        resolve("Task Done!")
     }, 1000)
-
 })
 
-promiseOne.then(function () {
+promiseOne.then(function (data) {
+    console.log(data)
     console.log("Promise Consumed ");
     console.log();
-
 })
 
 
-
-// SECOND PROMISE 
-
+// SECOND PROMISE  and modern way to code 
 new Promise(function (resolve, reject) {
     setTimeout(function () {
-        console.log("After 2 sec --->>>> ");
         console.log("Async task 2 is completed");
         resolve()
-
     }, 2000)
 }).then(function () {
     console.log("Async task 2 Promise is consumed");
     console.log();
-
 })
 
 
-
 // THIRD PROMISE 
-
 const promiseThree = new Promise(function (resolve, reject) {
     setTimeout(function () {
-        console.log("After 3 sec --->>>> ");
         resolve({ username: "Krishna ", email: "Krish@google.com" })
     }, 3000)
 })
 
 promiseThree.then(function (user) {
     console.log(user);
+    console.log(user.username);
     console.log();
-
 })
 
 // FOURTH PROMISE 
-
 const promiseFour = new Promise(function (resolve, reject) {
     setTimeout(function () {
-        console.log("After 4 sec --->>>> ");
         let error = false
         if (!error) {
             resolve({ username: "Krish", password: "Kris@2002" })
@@ -65,28 +51,22 @@ const promiseFour = new Promise(function (resolve, reject) {
         }
     }, 4000)
 })
-
-promiseFour.then((user) => {
+promiseFour
+.then((user) => {
     console.log(user);
-    return user.username;
-
-}).then((username) => {
-    console.log(username);
-
-}).catch(function (error) {
-    console.log(error);
-
-}).finally(function () {
-    console.log("The promise is either resolved or rejected ");
+    return user.username;})
+.then((username) => {
+    console.log(username);})
+.catch(function (error) {
+    console.log(error);})
+.finally(function () {
+    console.log("The promise4 is either resolved or rejected ");
     console.log();
 })
 
-
 // PROMISE FIVE
-
 const promiseFive = new Promise(function (resolve, reject) {
     setTimeout(function () {
-        console.log("After 5 sec --->>>> ");
         let error = true
         if (!error) {
             resolve({ username: "Java-Script", password: "#JS@2002" })
@@ -109,30 +89,25 @@ async function consumePromiseFive(params) {
 consumePromiseFive()
 
 
-//  Get all Users 
-// async function getAllUsers(params) {
-//     try {
-//         const response = await fetch('https://jsonplaceholder.typicode.com/users')
-//         const data = await response.json()
-//         console.log(data);
-//         console.log();
-
-//     } catch (error) {
-//         console.log("E : ", error);
-
-//     }
-// }
-// getAllUsers()
+ // Get all Users 
+async function getAllUsers(params) {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/users')
+        const data = await response.json()
+        console.log(data);
+    } catch (error) {
+        console.log("E : ", error);
+    }
+}
+getAllUsers()
 
 // doing same by fetch 
-
 fetch('https://api.github.com/users/hiteshchoudhary')
     .then((response) => {
         return response.json()
     })
     .then((data) => {
         console.log(data);
-
     })
     .catch((error) => console.log(error))
 

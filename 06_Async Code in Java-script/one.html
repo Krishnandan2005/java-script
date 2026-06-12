@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async code</title>
+    <style>
+        body {
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>******Learning Async code with Chai aur code *******</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // ---->>>> setTimeout ---- clearTimeout ---->>>> 
+    // 1 
+    setTimeout(function () {
+        console.log("Hi Krishna")
+    }, 2000) //--->>> means execute after 2 sec 
+
+
+    // 2 
+    const changeText = function () {
+        document.querySelector('h1').innerHTML = "Best Series of JS"
+    }
+
+    const erase = setTimeout(changeText, 5000) // change the text after 5 sec
+
+
+    // 3 
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(erase) // stop when pressed 
+        console.log('STOPPED')
+    })
+
+
+</script>
+
+</html>

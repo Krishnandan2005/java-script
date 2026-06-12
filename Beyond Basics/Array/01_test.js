@@ -1,7 +1,7 @@
 // const myArr = []
 // %DebugPrint(myArr)
 
-const arr2 = [1,2,3,4,5] // -->> Packed_SMI_Elements
+const arr2 = [1, 2, 3, 4, 5] // -->> Packed_SMI_Elements
 
 arr2.push(6.0)  // -->> Packed_Double_Elements 
 
@@ -27,5 +27,28 @@ console.log(arr2[9]);
 
 console.log();
 
-const arr3 = [1,2,3,4,5,6,7,8]
+const arr3 = [1, 2, 3, 4, 5, 6, 7, 8]
 console.log(arr3[2]);
+
+// SMI > Double > Packed elements 
+// H_SMI > H_Double > H_packed elements 
+
+
+console.log();
+const arr4 = new Array(3)
+// just 3 holes -->> Holey SMI elements 
+arr4[0] = '1'  // holey elemets 
+arr4[1] = '2'  // holey elemets 
+arr4[2] = '3'  // holey elemets 
+
+// arr5 is much better than arr4
+const arr5 = []
+arr5.push('1') // packed elements 
+arr5.push('2') // packed elements 
+arr5.push('3') // packed elements 
+
+
+const arr6 = [1, 2, 3, 4]
+arr6.push(Infinity) // -->> infinity / NaN -->> double 
+
+// for ,for-of,for-each loops must be preffered 

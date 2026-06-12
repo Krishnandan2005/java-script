@@ -1,3 +1,4 @@
+// ============ Number ==================
 const score = 400
 console.log(score);
 console.log(typeof score);
@@ -21,12 +22,13 @@ console.log(hundreds.toLocaleString('en-IN'));
 console.log("=======================");
 
 //  ============ +++++ MATHS ++++++ =============
-console.log("============ +++++ MATHS ++++++ =============");
+console.log("============ +++ MATHS +++ =============");
 console.log();
 console.log(Math);
 console.log(Math.abs(-4));
 console.log(Math.round(-4.7));
 console.log(Math.min(4,3,6,8,10));
+console.log(Math.max(4,3,6,8,10));
 console.log();
 
 
@@ -35,12 +37,12 @@ console.log(Math.random());
 console.log((Math.random()*10)+1);
 console.log((Math.floor(Math.random()*10)+1));
 
-const min = 10;
-const max = 20;
+let min = 1;
+let max = 6;
 
-console.log(Math.floor(Math.random() *(max - min + 1) + min));
- 
+let dice = Math.floor(Math.random() * (max - min + 1) + min);
 
+console.log(dice);
 
 
 

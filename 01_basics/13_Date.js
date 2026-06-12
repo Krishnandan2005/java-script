@@ -9,10 +9,11 @@ console.log(myDate.toTimeString());
 console.log("=======================================");
 
 
-// Dates 
+// Dates  user defined  
 // let date = new Date(2026, 0, 23)
 // let date = new Date(2026, 1, 23,5 ,3)
-let date = new Date("02-05-2026")
+// let date = new Date("15-5-2026")  ---->>>> invalid syntax
+let date = new Date("2026-05-15")
 console.log(date.toLocaleString());
 console.log("=======================================");
 
@@ -31,6 +32,8 @@ console.log(newDate.getDate());
 console.log(newDate.getHours());
 console.log(newDate.getTime());
 
+
+// ======== Important thing to note ============
 console.log("=======================================");
 newDate.toLocaleString('default',{
     weekday : "long",

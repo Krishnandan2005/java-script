@@ -1,7 +1,7 @@
 // ### Math.PI is a read Only property So we can't Change the value 
-console.log(Math.PI);
-Math.PI = 5 // -->> does not change because the property is not writable.
-console.log(Math.PI);
+// console.log(Math.PI);
+// Math.PI = 5 // -->> does not change because the property is not writable.
+// console.log(Math.PI);
 
 
 const descriptor = Object.getOwnPropertyDescriptor(Math, 'PI')

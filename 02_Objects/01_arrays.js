@@ -18,6 +18,7 @@ console.log("======== ++++++ Array Methods ++++++ =======");
 // push 
 console.log("Push");
 myArray.push(10);
+myArray.push(12);
 console.log(myArray);
 console.log();
 
@@ -30,6 +31,8 @@ console.log();
 // push into first and then move all other by 1
 console.log("Unshift method");
 myArray.unshift(11);
+console.log(myArray);
+myArray.shift();
 console.log(myArray);
 myArray.shift();
 console.log(myArray);
